@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Ravintolalista testi</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>Ravintolatesti</h1>
+
+		<div id="app">
+			{{ message }}
+		</div>
+		
+		<script>
+			var app = new Vue({
+			el: '#app',
+			data: {
+			message: 'Tälle päivälle ei ole ruokalistaa!'
+			}
+			})
+		</script>
+	</body>
+</html>
