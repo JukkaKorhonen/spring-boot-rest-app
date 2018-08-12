@@ -18,7 +18,7 @@ import fi.korhonen.jukka.reader.RestReader;
 @Controller
 public class RestaurantController {
 
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String test1(Model model) throws IOException {
 
 		//Tomorrow after 4PM
