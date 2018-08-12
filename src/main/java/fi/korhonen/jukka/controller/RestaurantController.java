@@ -3,6 +3,7 @@ package fi.korhonen.jukka.controller;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -31,18 +32,21 @@ public class RestaurantController {
 		try {
 			Optional<Course> restaurantListToday = Optional.ofNullable(reader.readRestaurantData(date));
 
-			if (restaurantListToday.isPresent()) {
-				if (restaurantListToday.get().getAdditionalProperties() == null) {
-					return "nofood";
-				}
-				
-				Map<String, Object> menuu = restaurantListToday.get().getAdditionalProperties();
-				@SuppressWarnings("unchecked")
-				List<Course> course = (List<Course>) menuu.get("courses");
-				
-				model.addAttribute("course", course);
-				
-			}
+			List<Course> course = new ArrayList<Course>();
+			model.addAttribute("course", course);
+			
+//			if (restaurantListToday.isPresent()) {
+//				if (restaurantListToday.get().getAdditionalProperties() == null) {
+//					return "nofood";
+//				}
+//				
+//				Map<String, Object> menuu = restaurantListToday.get().getAdditionalProperties();
+//				@SuppressWarnings("unchecked")
+//				List<Course> course = (List<Course>) menuu.get("courses");
+//				
+//				model.addAttribute("course", course);
+//				
+//			}
 
 		} catch (TechnicalException e) {
 			return "error";
