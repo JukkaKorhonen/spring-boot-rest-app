@@ -80,6 +80,11 @@
             <artifactId>postgresql</artifactId>
             <version>9.4-1203-jdbc42</version>
         </dependency> -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
         <!-- the core, which includes Streaming API, shared low-level abstractions 
 			(but NOT data-binding) -->
 		<dependency>
