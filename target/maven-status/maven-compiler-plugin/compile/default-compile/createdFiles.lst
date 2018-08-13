@@ -1,0 +1,7 @@
+fi\korhonen\jukka\error\TechnicalException.class
+fi\korhonen\jukka\controller\RestaurantController.class
+fi\korhonen\jukka\model\sode\Course.class
+fi\korhonen\jukka\model\sode\Post.class
+fi\korhonen\jukka\reader\RestReader.class
+fi\korhonen\jukka\model\sode\Meta.class
+fi\korhonen\jukka\RestaurantAppApplication.class

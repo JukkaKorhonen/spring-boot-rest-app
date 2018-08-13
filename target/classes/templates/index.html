@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Restaurant Pitäjänmäki</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+	</head>
+	<body>
+		<h1>
+		<div id="h1">
+			{{ message }}
+		</div>
+		
+		</h1>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Ruoka</th>
+					<th>Luokat</th>
+					<th>Kategoria</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="course : ${course}">
+					<td th:text="${course.title_fi}"></td>
+					<td th:text="${course.properties}"></td>
+					<td th:text="${course.category}"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<script>
+			var app = new Vue({
+			el: '#h1',
+			data: {
+			message: 'Sodexo Pitäjänmäki'
+			}
+			})
+		</script>
+	</body>
+</html>
